@@ -1,0 +1,34 @@
+<navbar data="overview.navbar"></navbar>
+
+<!-- grant panels can be color coded when process is complete -->
+<div id="content">
+  <sidebar></sidebar>
+  <div id="contentview" class="container-fluid" ng-class="{ 'toggled': toggled }">
+    <!-- <div id="overview-board"> -->
+    <div class="container-fluid vert-panels">
+      <div class="vert-panel tab-top">
+        <h4>Complete</h4>
+      </div>
+      <div class="vert-panel tab-top">
+        <h4>ASU</h4>
+      </div>
+      <div class="vert-panel tab-top">
+        <h4>Internal</h4>
+      </div>
+      <div class="vert-panel tab-top">
+        <h4>Research</h4>
+      </div>
+    </div>
+
+    <div class="container-fluid grant-panels">
+      <div class="grant-panel" ng-repeat="grant in grants.Grants">
+        <div class="grant-info">
+          <a href="detail">{{ grant.Grant_Name }}</a>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+  </div>
+</div>
+
+<footer-template></footer-template>

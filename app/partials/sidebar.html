@@ -1,0 +1,13 @@
+<div id="sidebar" ng-class="{ 'toggled': toggled }">
+  <ul class="sidebar-nav">
+    <li ng-repeat="grant in grants.Grants">
+      <a href="#">{{ grant.Grant_Name }}</a>
+    </li>
+    <li ng-show="!grants.Grants.length">
+      <a href="#">no grants</a>
+    </li>
+  </ul>
+</div>
+<div id="menu-toggle">
+  <a class="glyphicon glyphicon-menu-right large" ng-class="{ 'toggled': !toggled }" ng-click="toggle()"></a>
+</div>

@@ -1,0 +1,44 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a id="brand" class="navbar-brand" href="#">{{ data.pageTitle }}</a>
+
+    </div>
+
+    <div id="navbar" class="collapse navbar-collapse">
+
+      <ul class="nav navbar-nav">
+        <li ng-repeat="item in data.menuLeft">
+          <a style="{{ item.style }}"
+            href="{{ item.href }}"
+            class="{{ item.class }}"
+            rel="{{ item.rel }}"
+            data-toggle="{{ item.dataToggle }}"
+            data-target="{{ item.dataTarget }}"
+            ng-bind-html="item.name"></a>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li ng-repeat="item in data.menuRight">
+          <a style="{{ item.style }}"
+            href="{{ item.href }}"
+            class="{{ item.class }}"
+            rel="{{ item.rel }}"
+            data-toggle="{{ item.dataToggle }}"
+            data-target="{{ item.dataTarget }}"
+            ng-bind-html="item.name"></a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
